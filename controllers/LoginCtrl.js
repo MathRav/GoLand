@@ -3,7 +3,7 @@ app.controller('LoginCtrl',['$scope','$http','$cookies','$window','base_url','to
         $http.post(base_url+"Connection/Connexion",{nom : $scope.login, password : $scope.password}).then(function(response){
             if(response.data.Status == "200"){
                 $cookies.putObject('token',response.data.body);
-                $window.location.href = "Accueil.html";
+                $window.location.href = "accueil.html";
             }
             else {
                 $scope.msg = "Login/Mot de passe incorrectes";

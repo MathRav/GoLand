@@ -10,10 +10,6 @@ app.service('token',['$cookies','$window',function($cookies,$window){
     this.getToken = function(){
         return $cookies.getObject('token');
     }
-    this.disconnect = function(){
-        $cookies.remove("token");
-        $window.location.href = "index.html";
-    }
 }]);
 app.service('client',['$http','base_url','token',function($http,base_url,token){
     this.getListeBanqueClient= function(){
