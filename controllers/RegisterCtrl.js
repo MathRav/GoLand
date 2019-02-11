@@ -1,6 +1,6 @@
 app.controller("RegisterCtrl",function($scope,$http,$window,base_url){
     $scope.inscrire = function(){
-        $http.post(base_url+"Connection/Inscription",{nom : $scope.login, password : $scope.password}).then(function(response){
+        $http.post(base_url+"Connection/Inscription",{nom : $scope.login, password : $scope.password,numero : $scope.numero}).then(function(response){
             console.log(response.data);
             if(response.data.Status == "200"){
                 $scope.msg = "Inscription reussie";
