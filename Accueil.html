@@ -511,8 +511,8 @@
                                             <tbody border="1">
                                             <tr ng-repeat="mvt in listeMouvement">
                                                 <td>{{mvt.cb.b.nom}}</td>
-                                                <td>{{mvt.debit | number : 2}} {{mvt.cb.b.devise}}</td>
-                                                <td>{{mvt.credit | number : 2}} {{mvt.cb.b.devise}} </td>
+                                                <td>{{mvt.debit | number : 2}} {{mvt.cb.devise}}</td>
+                                                <td>{{mvt.credit | number : 2}} {{mvt.cb.devise}} </td>
                                                 <td>{{mvt.date | date}}</td>
                                             </tr>
                                             </tbody>
