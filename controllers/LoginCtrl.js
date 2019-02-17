@@ -3,7 +3,7 @@ app.controller('LoginCtrl',['$scope','$http','$cookies','$window','base_url','to
         $http.post(base_url+"Connection/Connexion",{nom : $scope.login, password : $scope.password}).then(function(response){
             if(response.data.error == 0){
                 $cookies.putObject('token',response.data.data);
-                $window.location.href = "accueil.html";
+                $window.location.href = "Accueil.html";
             }
             else {
                 $scope.msg = response.data.message;
